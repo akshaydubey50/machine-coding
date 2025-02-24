@@ -1,0 +1,147 @@
+/* Overall Calendar Layout */
+.calendar-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.calendar-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Month Layout */
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.month-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.month-title {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Grid for Days */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day-header {
+  font-weight: bold;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 5px;
+}
+
+.empty-day {
+  height: 30px;
+}
+
+/* Calendar Days */
+.calendar-day {
+  text-align: center;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.calendar-day:hover {
+  background: #add8e6;
+}
+
+/* Highlight Today's Date */
+.today {
+  background: red !important;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Sidebar */
+.sidebar-container{
+  margin:20px 50px;
+
+}
+
+.container{
+  cursor: pointer;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.list-record{
+  display:flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Toast */
+
+.toast-container {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.toast {
+  width: 12rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  position: relative;
+  animation: slide 1s 1;
+  margin: 0.5rem;
+  span {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Star Rating */
+
+.star-icon {
+  --icon-size: 32px;
+
+  cursor: pointer;
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.star-icon-filled {
+  fill: yellow;
+}
+
+
+/* Meeting Calendar */
+.event{
+  width: calc(100% - 6rem);
+}
